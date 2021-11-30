@@ -6,4 +6,5 @@ class User < ApplicationRecord
   has_many :favorites
   has_many :favorited_jobs, through: :favorites, source: :record, source_type: 'Job'
   has_many :favorited_resources, through: :favorites, source: :record, source_type: 'Resource'
+
 end
