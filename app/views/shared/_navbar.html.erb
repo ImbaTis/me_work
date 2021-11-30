@@ -1,15 +1,27 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
-    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-  <% end %>
+    <div class="relative">
+      <div class="flex justify-between items-center max-w-7xl mx-auto px-4 py-4">
+        <div class="flex justify-start lg:w-0 lg:flex-1">
+            <%= image_tag "logo.png", alt: "Me Work", width: 150 %>
+        </div>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<%# nav bar content %>
+        <nav class="space-x-20">
+          <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">
+            Profile
+          </a>
+          <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">
+            Job
+          </a>
+          <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">
+            Resources
+          </a>
+          <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">
+            Dashboard
+          </a>
 
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+
+
       <% if user_signed_in? %>
         <li class="nav-item active">
           <%= link_to "Home", "#", class: "nav-link" %>
@@ -25,11 +37,10 @@
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
+
       <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-        </li>
+          <%= link_to "Login", new_user_session_path, class:"ml-8 whitespace-nowrap inline-flex items-center justify-center bg-origin-border px-4 py-2 border border-transparent text-base font-medium text-black" %>
       <% end %>
-    </ul>
+      </nav>
   </div>
 </div>
