@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# 10.times do
+#   Job.create(title: Faker::Job.title, industry: Faker::Job.field)
+# end
+
+# 10.times do Resource.create(name: )
