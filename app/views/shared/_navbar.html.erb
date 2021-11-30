@@ -1,46 +1,20 @@
-    <div class="relative">
-      <div class="flex justify-between items-center max-w-7xl mx-auto px-4 py-4">
-        <div class="flex justify-start lg:w-0 lg:flex-1">
-            <%= image_tag "logo.png", alt: "Me Work", width: 150 %>
-        </div>
-
+<div class="flex justify-between items-center max-w-7xl mx-auto px-1 py-1">
+    <div class="flex justify-start lg:w-0 lg:flex-1">
+        <%= image_tag "logo.png", alt: "Me Work", width: 150 %>
+    </div>
 <%# nav bar content %>
         <nav class="space-x-20">
-          <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">
-            Profile
-          </a>
-          <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">
-            Job
-          </a>
-          <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">
-            Resources
-          </a>
-          <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">
-            Dashboard
-          </a>
-
-
-
+          <%= link_to "Home", root_path, class: "text-base font-medium text-gray-500 hover:text-gray-900" %>
+          <%= link_to "Profile", profile_path, class: "text-base font-medium text-gray-500 hover:text-gray-900" %>
+          <%= link_to "Jobs", jobs_path, class: "text-base font-medium text-gray-500 hover:text-gray-900" %>
+          <%= link_to "Resources", resources_path, class: "text-base font-medium text-gray-500 hover:text-gray-900" %>
+          <%= link_to "Dashboard", dashboard_path, class: "text-base font-medium text-gray-500 hover:text-gray-900" %>
 
       <% if user_signed_in? %>
-        <li class="nav-item active">
-          <%= link_to "Home", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Messages", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item dropdown">
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Action", "#", class: "dropdown-item" %>
-            <%= link_to "Another action", "#", class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
-        </li>
-
+        <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "text-base font-medium bg-yellow-800 text-white font-bold py-2 px-4 rounded" %>
       <% else %>
-          <%= link_to "Login", new_user_session_path, class:"ml-8 whitespace-nowrap inline-flex items-center justify-center bg-origin-border px-4 py-2 border border-transparent text-base font-medium text-black" %>
+        <%= link_to "Login", new_user_session_path, class:"text-base font-medium bg-yellow-800 text-white font-bold py-2 px-4 rounded" %>
       <% end %>
       </nav>
-  </div>
 </div>
+<hr>
