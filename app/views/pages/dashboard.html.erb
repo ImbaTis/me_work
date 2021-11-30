@@ -1,3 +1,10 @@
+Dashboard home page
+<% @jobs.each do |job| %>
+<%= job.title %>
+<% end %>
+<% @resources.each do |res| %>
+<%= res.name %>
+<% end %>
 
 <!-- Nav Bar Section -->
 
@@ -503,14 +510,3 @@
     </main>
   </div>
 </div>
-
-
-
-Dashboard home page
-<% @jobs.each do |job| %>
-<%= job.title %>
-<% end %>
-<% @resources.each do |job| %>
-<%= job.name %>
-<% end %>
-
