@@ -5,9 +5,13 @@ class PagesController < ApplicationController
   end
 
   def dashboard
+    @jobs = current_user.favorited_jobs
+    @resources = current_user.favorited_resources
   end
 
   def profile
+    
   end
-  
+
+
 end
