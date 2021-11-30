@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :favorites
-  has_many :jobs, through: :favo
-
+  has_many :favorited_jobs, through: :favorites, source: :record, source_type: 'Job'
+  has_many :favorited_resources, through: :favorites, source: :record, source_type: 'Resource'
 
 end

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   resources :resources, only: [ :show, :index ]
   resources :jobs, only: [ :show, :index ]
+
   resources :favorites, only: [ :create, :delete ]
 
   get 'dashboard', to: 'pages#dashboard'
