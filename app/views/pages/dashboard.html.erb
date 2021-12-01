@@ -97,48 +97,48 @@
                       </div>
 
                       <div class="flex flex-col">
-                        <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-                          <div class="py-2 align-middle inline-block min-w-full">
+                        <div class="-my-6 overflow-x-auto sm:-mx-6 lg:-mx-6">
+                          <div class="py-12 align-middle inline-block min-w-full">
                             <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
                               <table class="min-w-full divide-y divide-gray-200">
                                 <thead class="bg-gray-50">
                                   <tr>
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                      Job
-                                    </th>
-                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                      Title
+                                      My Jobs
                                     </th>
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                       industry
                                     </th>
-  
+
                                     <th scope="col" class="relative px-6 py-3">
-                                      <span class="sr-only">Edit</span>
+                                      <span class="sr-only">APPLY</span>
+                                    </th>
+                                    <th scope="col" class="relative px-6 py-3">
+                                      <span class="sr-only">Rate</span>
                                     </th>
                                   </tr>
                                 </thead>
                                 <tbody>
                                   <!-- Odd row -->
-                                  <tr class="bg-white">
+                                  <%# Start loop %>
+                                  <% @jobs.each_with_index do |job, i| %>
+                                  <tr class="<%= i.odd? ? 'bg-white' : 'bg-gray-50' %>" >
                                     <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                                      Jane Cooper
+                                      <%= job.title %>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                      Regional Paradigm Technician
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                      jane.cooper@example.com
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                      Admin
+                                      <%= job.industry %>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                      <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                                      <a href="#" class="text-indigo-600 hover:text-indigo-900">APPLY</a>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                      <a href="#" class="text-indigo-600 hover:text-indigo-900">Rate</a>
                                     </td>
                                   </tr>
+                                  <% end %>
 
-                                  <!-- Even row -->
+                                  <%# <!-- Even row -->
                                   <tr class="bg-gray-50">
                                     <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                                       Cody Fisher
@@ -155,7 +155,9 @@
                                     <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                       <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
                                     </td>
-                                  </tr>
+                                  </tr> %>
+
+                                  <%# end LOOP %>
                                 </tbody>
                               </table>
                             </div>
@@ -169,7 +171,7 @@
 
 
 
-          <!-- /End replace -->
+
         </div>
       </div>
     </main>
