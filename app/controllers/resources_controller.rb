@@ -1,10 +1,16 @@
 class ResourcesController < ApplicationController
+  before_action :set_resource, only: [:show]
 
   def show
   end
 
   def index
   end
-  
+
+  private
+
+  def set_resource
+    @resource = Resource.find(params[:id])
+  end
 
 end
