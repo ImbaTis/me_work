@@ -4,7 +4,7 @@ class JobsController < ApplicationController
   end
 
   def index
-    @jobs = Job.all
+    @jobs = Job.where(fav: false)
     @user = current_user
   end
 
