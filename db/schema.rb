@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_02_061628) do
+ActiveRecord::Schema.define(version: 2021_12_02_085501) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 2021_12_02_061628) do
     t.string "description"
     t.string "url"
     t.boolean "fav"
+    t.string "time", default: "1hr"
   end
 
   create_table "test_results", force: :cascade do |t|
