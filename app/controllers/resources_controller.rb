@@ -5,6 +5,29 @@ class ResourcesController < ApplicationController
   end
 
   def index
+    # params[:kind]
+    if params == ''
+      @resources = Resource.where(kind: params[:kind])
+    else
+      @resources = Resource.all
+    end
+
+  end
+
+  def article
+    @jobs = Job.where(kind: 'article')
+  end
+
+  def book
+    @jobs = Job.where(kind: 'book')
+  end
+
+  def course
+    @jobs = Job.where(kind: 'course')
+  end
+
+  def video
+    @jobs = Job.where(kind: 'video')
   end
 
   private

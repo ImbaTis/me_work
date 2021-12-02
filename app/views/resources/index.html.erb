@@ -59,12 +59,90 @@
               Billing
             </a>
           </nav>
+          <%# <h1>CCCCCCC</h1> %>
         </div>
-      </div>
+<div class="flex flex-col py-4 pl-24">
+                        <div class="-my-6 overflow-x-auto sm:-mx-6 lg:-mx-6">
+                          <div class="py-12 align-middle inline-block min-w-full">
+                            <div class="shadow overflow-auto h-96 border-b border-gray-200 sm:rounded-lg">
+                              <table class="min-w-full divide-y divide-gray-200">
+                                <thead class="bg-gray-50">
+                                  <tr>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                      My Resources
+                                    </th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                      Description
+                                    </th>
 
-  </div>
+                                    <th scope="col" class="relative px-6 py-3">
+                                      <span class="st-only">APPLY</span>
+                                    </th>
+                                    <th scope="col" class="relative px-6 py-3">
+                                      <span class="sr-only">Rate</span>
+                                    </th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <!-- Odd row -->
+                                  <%# Start loop %>
+                                  <% @resources.each_with_index do |resource, i| %>
+                                  <tr class="<%= i.odd? ? 'bg-white' : 'bg-gray-50' %>" >
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                                      <%= resource.name %>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                      <%#= resource.industry %>
+                                      <%= resource.send('description') %>
+                                      <%# @columns = ['title', 'industry'] %>
+                                      <%#= resource.@columns[i] %>
+                                      <%#= resource.send(@columns[i]) %>
+                                    </td>
+                                    <td class="px-1 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                      <a href="#" class="text-indigo-600 hover:text-indigo-900">APPLY</a>
+                                    </td>
+                                    <td class="<%= resource.fav? ? 'fas fa-heart' : 'far fa-heart'  %> px-1 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                      <a href="#" class="text-indigo-600 hover:text-indigo-900"></a>
+                                    </td>
+                                    <td class="px-1 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                      <a href="#" class="text-indigo-600 hover:text-indigo-900">Rate</a>
+                                    </td>
+                                  </tr>
+                                  <% end %>
+
+                                  <%# <!-- Even row -->
+                                  <tr class="bg-gray-50">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                                      Cody Fisher
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                      Product Directives Officer
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                      cody.fisher@example.com
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                      Owner
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                      <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                                    </td>
+                                  </tr> %>
+
+                                  <%# end LOOP %>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
 
 
 
 
 </div>
+        <%# <h1>BBBBB</h1> %>
+      </div>
+      <%# <h1>AAA</h1> %>
+  </div>
+  <%# <%= @resources.count %>
