@@ -1,58 +1,134 @@
-<div class="flex flex-row">
+<div class="container p-2">
+        <div class="md:flex no-wrap md:-mx-2 ">
+            <!-- Left Side -->
+            <div class="w-full md:w-3/12 md:mx-2">
+                <!-- Profile Card -->
+                <div class="bg-white p-3">
+                    <div class="image overflow-hidden">
+                        <img class="h-auto w-full mx-auto"
+                            src="https://media.istockphoto.com/photos/english-teacher-standing-at-board-explaining-lesson-to-students-picture-id1286519342?b=1&k=20&m=1286519342&s=170667a&w=0&h=5FU2IhbDsAetNUE4It9DycXg3oE1k0JG21kLQERd-Ek="
+                            alt="">
+                    </div>
+                    <h3 class="text-gray-600 font-lg text-semibold leading-6 mt-3">Gary</h3>
+                    <p class="text-sm text-gray-500 hover:text-gray-600 leading-6">Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit.
+                        Reprehenderit, eligendi dolorum sequi illum qui unde aspernatur non deserunt</p>
+                </div>
+                <!-- End of profile card -->
+            </div>
+            <!-- Right Side -->
+            <div class="w-full md:w-9/12 mx-2 h-64">
+                <!-- Profile tab -->
+                <!-- About Section -->
+                <div class="bg-white p-3 shadow-sm rounded-sm">
+                    <div class="flex items-center space-x-2 font-semibold text-gray-900 leading-8">
+                        <span class="tracking-wide ml-6">About</span>
+                    </div>
+                    <div class="text-gray-700">
+                        <div class="grid md:grid-cols-2 text-sm">
+                            <div class="grid grid-cols-2">
+                                <div class="px-4 py-2 font-semibold">First Name</div>
+                                <div class="px-4 py-2">Gary</div>
+                            </div>
+                            <div class="grid grid-cols-2">
+                                <div class="px-4 py-2 font-semibold">Last Name</div>
+                                <div class="px-4 py-2">Shin</div>
+                            </div>
+                            <div class="grid grid-cols-2">
+                                <div class="px-4 py-2 font-semibold">Gender</div>
+                                <div class="px-4 py-2">Male</div>
+                            </div>
+                            <div class="grid grid-cols-2">
+                                <div class="px-4 py-2 font-semibold">Contact No.</div>
+                                <div class="px-4 py-2">+86 12345678</div>
+                            </div>
+                            <div class="grid grid-cols-2">
+                                <div class="px-4 py-2 font-semibold">Current Address</div>
+                                <div class="px-4 py-2">Shanghai Center</div>
+                            </div>
+                            <div class="grid grid-cols-2">
+                                <div class="px-4 py-2 font-semibold">Permanant Address</div>
+                                <div class="px-4 py-2">Jing An Temple</div>
+                            </div>
+                            <div class="grid grid-cols-2">
+                                <div class="px-4 py-2 font-semibold">Email.</div>
+                                <div class="px-4 py-2">
+                                    <p>test@test.com</a>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2">
+                                <div class="px-4 py-2 font-semibold">Birthday</div>
+                                <div class="px-4 py-2">Mar 01, 1980</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of about section -->
 
-  <div class="flex flex-col">
-    <div class="flex flex-col ml-40 mr-40 mt-10">
-      <div class="flex flex-row mx-auto">
-        <%= render 'shared/profile_card'%>
-        <%= render 'shared/profile_card'%>
-      </div>
 
-    <div class="mt-10">
-      <%# Information Section %>
-      <div class="bg-white shadow overflow-hidden">
-        <div class="p-2">
-          <h3 class="text-lg font-medium text-gray-900">
-            Detailed Information
-          </h3>
-          <p class="mt-1 max-w-2xl text-sm text-gray-500">
-            Personal details
-          </p>
+                <!-- Experience and education -->
+                <div class="bg-white p-3 shadow-sm rounded-sm">
+
+                    <div class="grid grid-cols-2">
+                        <div>
+                            <div class="flex items-center space-x-2 font-semibold text-gray-900 leading-8 mb-3">
+                                <span clas="text-green-500">
+                                    <svg class="h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                    </svg>
+                                </span>
+                                <span class="tracking-wide">Experience</span>
+                            </div>
+                            <ul class="list-inside space-y-2">
+                                <li>
+                                    <div class="text-teal-600">Owner at Her Company Inc.</div>
+                                    <div class="text-gray-500 text-xs">March 2020 - Now</div>
+                                </li>
+                                <li>
+                                    <div class="text-teal-600">Owner at Her Company Inc.</div>
+                                    <div class="text-gray-500 text-xs">March 2020 - Now</div>
+                                </li>
+                                <li>
+                                    <div class="text-teal-600">Owner at Her Company Inc.</div>
+                                    <div class="text-gray-500 text-xs">March 2020 - Now</div>
+                                </li>
+                                <li>
+                                    <div class="text-teal-600">Owner at Her Company Inc.</div>
+                                    <div class="text-gray-500 text-xs">March 2020 - Now</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="flex items-center space-x-2 font-semibold text-gray-900 leading-8 mb-3">
+                                <span clas="text-green-500">
+                                    <svg class="h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path fill="#fff" d="M12 14l9-5-9-5-9 5 9 5z" />
+                                        <path fill="#fff"
+                                            d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+                                    </svg>
+                                </span>
+                                <span class="tracking-wide">Education</span>
+                            </div>
+                            <ul class="list-inside space-y-2">
+                                <li>
+                                    <div class="text-teal-600">Masters Degree in Oxford</div>
+                                    <div class="text-gray-500 text-xs">March 2020 - Now</div>
+                                </li>
+                                <li>
+                                    <div class="text-teal-600">Bachelors Degreen in LPU</div>
+                                    <div class="text-gray-500 text-xs">March 2020 - Now</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End of Experience and education grid -->
+                </div>
+                <!-- End of profile tab -->
+            </div>
         </div>
-        <div class="border-t border-gray-200 px-4 py-5 sm:p-0">
-          <dl class="sm:divide-y sm:divide-gray-200">
-            <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt class="text-sm font-medium text-gray-500">
-                Name
-              </dt>
-              <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                Jone
-              </dd>
-            </div>
-            <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt class="text-sm font-medium text-gray-500">
-                Hobbies
-              </dt>
-              <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                Coding
-              </dd>
-            </div>
-            <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt class="text-sm font-medium text-gray-500">
-                Email address
-              </dt>
-              <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                jone@test.com
-              </dd>
-            </div>
-          </dl>
-        </div>
-      </div>
     </div>
-  </div>
-
-
-  </div>
-
-
-
-</div>
