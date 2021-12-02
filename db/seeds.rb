@@ -15,8 +15,17 @@ end
   Job.create(title: Faker::Job.title, industry: Faker::Job.field, new: true, fav: false)
 end
 
-50.times do
-  Resource.create(name: Faker::Book.title)
+10.times do
+  Resource.create(name: Faker::Book.title, kind: 'course', description: Faker::ChuckNorris.fact, url: Faker::Internet.url )
+end
+10.times do
+  Resource.create(name: Faker::Book.title, kind: 'book', description: Faker::ChuckNorris.fact, url: Faker::Internet.url )
+end
+10.times do
+  Resource.create(name: Faker::Book.title, kind: 'article', description: Faker::ChuckNorris.fact, url: Faker::Internet.url )
+end
+10.times do
+  Resource.create(name: Faker::Book.title, kind: 'video', description: Faker::ChuckNorris.fact, url: Faker::Internet.url )
 end
 
 10.times do

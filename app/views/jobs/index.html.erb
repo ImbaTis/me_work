@@ -48,7 +48,7 @@
                                     </th>
 
                                     <th scope="col" class="relative px-6 py-3">
-                                      <span class="sr-only">APPLY</span>
+                                      <span class="">APPLY</span>
                                     </th>
                                     <th scope="col" class="relative px-6 py-3">
                                       <span class="sr-only">Rate</span>
@@ -64,7 +64,11 @@
                                       <%= job.title %>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                      <%= job.industry %>
+                                      <%#= job.industry %>
+                                      <%= job.send('industry') %>
+                                      <%# @columns = ['title', 'industry'] %>
+                                      <%#= job.@columns[i] %>
+                                      <%#= job.send(@columns[i]) %>
                                     </td>
                                     <td class="px-1 py-4 whitespace-nowrap text-right text-sm font-medium">
                                       <a href="#" class="text-indigo-600 hover:text-indigo-900">APPLY</a>
@@ -102,19 +106,11 @@
                               </table>
                             </div>
                           </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </main>
             </div>
           </div>
-          </div>
-
-
-
-
-
-
-
-        </div>
-      </div>
-    </main>
-
-  </div>
-</div>

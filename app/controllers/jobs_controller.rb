@@ -8,6 +8,9 @@ class JobsController < ApplicationController
     @user = current_user
   end
 
+
+
+
   private
 
   def set_job
