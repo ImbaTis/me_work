@@ -121,7 +121,7 @@
                                 </thead>
                                 <tbody>
                                   <!-- Odd row -->
-                                  <%# Start loop %>
+                                  <%# Start loop %>\
                                   <% @jobs.each_with_index do |job, i| %>
                                   <tr class="<%= i.odd? ? 'bg-white' : 'bg-gray-50' %>" >
                                     <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
@@ -130,10 +130,13 @@
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                                       <%= job.industry %>
                                     </td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                    <td class="px-1 py-4 whitespace-nowrap text-right text-sm font-medium">
                                       <a href="#" class="text-indigo-600 hover:text-indigo-900">APPLY</a>
                                     </td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                    <td class="<%= job.fav? ? 'fas fa-heart' : 'far fa-heart'  %> px-1 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                      <a href="#" class="text-indigo-600 hover:text-indigo-900"></a>
+                                    </td>
+                                    <td class="px-1 py-4 whitespace-nowrap text-right text-sm font-medium">
                                       <a href="#" class="text-indigo-600 hover:text-indigo-900">Rate</a>
                                     </td>
                                   </tr>
