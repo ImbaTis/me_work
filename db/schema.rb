@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_29_102759) do
+ActiveRecord::Schema.define(version: 2021_12_02_085501) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,12 +31,19 @@ ActiveRecord::Schema.define(version: 2021_11_29_102759) do
     t.string "industry"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "fav"
+    t.boolean "new"
   end
 
   create_table "resources", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "kind"
+    t.string "description"
+    t.string "url"
+    t.boolean "fav"
+    t.string "time", default: "1hr"
   end
 
   create_table "test_results", force: :cascade do |t|
@@ -57,6 +64,33 @@ ActiveRecord::Schema.define(version: 2021_11_29_102759) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "location"
+    t.text "languages"
+    t.text "code"
+    t.text "slogan"
+    t.text "quote"
+    t.text "passions"
+    t.text "hobbies"
+    t.text "story"
+    t.text "work_style"
+    t.text "causes"
+    t.text "why"
+    t.text "hours"
+    t.text "commute"
+    t.text "skills"
+    t.text "contribute"
+    t.text "comp"
+    t.text "teammates"
+    t.text "boss"
+    t.text "org_structure"
+    t.text "size"
+    t.text "work_structure"
+    t.text "amenities"
+    t.text "travel"
+    t.text "pic_url"
+    t.text "portfolio_url"
+    t.text "cv_url"
+    t.text "cover_letter_url"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

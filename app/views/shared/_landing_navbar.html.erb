@@ -1,0 +1,24 @@
+<div class="bg-yellow-400 mb-5">
+  <div class="flex justify-between items-center max-w-7xl mx-auto px-3 py-3">
+      <div class="flex justify-start">
+          <%= link_to root_path do %>
+            <%= image_tag "logo_no_background.png", alt: "Me Work", width: 100 %>
+          <% end %>
+      </div>
+  <%# nav bar content %>
+          <nav class="space-x-20">
+            <%= link_to "Home", root_path, class: "text-white font-medium hover:text-yellow-800" %>
+            <%= link_to "Profile", profile_path, class: "text-white font-medium hover:text-yellow-800" %>
+            <%= link_to "Jobs", jobs_path, class: "text-white font-medium hover:text-yellow-800" %>
+            <%= link_to "Resources", resources_path, class: "text-white font-medium hover:text-yellow-800" %>
+            <%= link_to "Dashboard", dashboard_path, class: "text-white font-medium hover:text-yellow-800" %>
+
+        <% if user_signed_in? %>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "text-white font-medium bg-yellow-800 text-white font-bold py-2 px-4 rounded" %>
+          <%# <%= image_tag "logo.png", alt: "Me Work", width: 150 %>
+        <% else %>
+          <%= link_to "Login", new_user_session_path, class:"text-white font-medium bg-yellow-800 text-white font-bold py-2 px-4 rounded" %>
+        <% end %>
+        </nav>
+  </div>
+</div>
