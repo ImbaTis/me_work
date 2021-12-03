@@ -1,61 +1,136 @@
+<div class="flex w-64 flex-col top-10 bottom-0">
+    <div class="flex flex-col flex-grow pt-5 bg-yellow-400">
+      <div class="mt-5 flex-1 flex flex-col">
+        <nav class="px-2 pb-4 space-y-1">
+          <a href="#" class=" text-center text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+            Dashboard
+          </a>
 
-<div class="flex flex-col justify-evenly h-auto bg-gray-200">
-    <div class="mt-5">
-     <span class="ml-16 font-serif text-lg text-yellow-600">My Jobs</span>
-      <div class="flex overflow-x-scroll pb-10 hide-scroll-bar">
-          <div class="flex flex-nowrap ml-10 ">          <% @jobs.each do |job|  %>
-            <div class="inline-block px-3">
-              <div class="w-80 h-48 max-w-xs overflow-hidden rounded-lg shadow-md  hover:shadow-xl transition-shadow duration-300 ease-in-out">
-                <div class="group h-40 px-4 py-4 rounded-md  flex flex-col justify-center  items-stretch  ml-3 mr-3 mt-3 mb-3">
-                  <h5 class="self-start"><%= job.title %></h5>
-                  <h6><%= job.industry %></h6>
-                  <p><%= job.description %></p>
-                </div>
-              </div>
+          <a href="#" class=" text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+            Team
+          </a>
+
+          <a href="#" class=" text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+            Projects
+          </a>
+
+
+          <a href="#" class=" text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+            Documents
+          </a>
+
+          <a href="#" class=" text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+            Reports
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="pl-64 flex flex-col flex-1">
+
+
+    <main>
+      <div class="py-6">
+
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+          <%# Profile here %>
+                    <div class="py-4">
+                      <div class="border-4 border-dashed border-gray-200 rounded-lg h-96">
+                        <div class="relative bg-white">
+                          <div class="lg:absolute lg:inset-0">
+                            <div class="lg:absolute lg:inset-y-0 lg:left-0 lg:w-1/2">
+                              <img class="h-56 w-full object-cover lg:absolute lg:h-full" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80" alt="">
+                            </div>
+                          </div>
+                          <div class="relative pt-12 pb-16 px-4 sm:pt-16 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto lg:grid lg:grid-cols-2">
+                            <div class="lg:col-start-2 lg:pl-8">
+                              <div class="text-base max-w-prose mx-auto lg:max-w-lg lg:ml-auto lg:mr-0">
+                                <h2 class="leading-6 text-indigo-600 font-semibold tracking-wide uppercase">Work with us</h2>
+                                <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Our Process</h3>
+                                <p class="mt-8 text-lg text-gray-500">Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique pellentesque. Blandit amet, sed aenean erat arcu morbi.</p>
+                                <div class="mt-5 prose prose-indigo text-gray-500">
+                                  <p>Sollicitudin </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="flex flex-col">
+                        <div class="-my-6 overflow-x-auto sm:-mx-6 lg:-mx-6">
+                          <div class="py-12 align-middle inline-block min-w-full">
+                            <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+                              <table class="min-w-full divide-y divide-gray-200">
+                                <thead class="bg-gray-50">
+                                  <tr>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                      My Jobs
+                                    </th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                      industry
+                                    </th>
+
+                                    <th scope="col" class="relative px-6 py-3">
+                                      <span class="sr-only">APPLY</span>
+                                    </th>
+                                    <th scope="col" class="relative px-6 py-3">
+                                      <span class="sr-only">Rate</span>
+                                    </th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <!-- Odd row -->
+                                  <%# Start loop %>
+                                  <% @jobs.each_with_index do |job, i| %>
+                                  <tr class="<%= i.odd? ? 'bg-white' : 'bg-gray-50' %>" >
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                                      <%= job.title %>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                      <%= job.industry %>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                      <a href="#" class="text-indigo-600 hover:text-indigo-900">APPLY</a>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                      <a href="#" class="text-indigo-600 hover:text-indigo-900">Rate</a>
+                                    </td>
+                                  </tr>
+                                  <% end %>
+
+                                  <%# <!-- Even row -->
+                                  <tr class="bg-gray-50">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                                      Cody Fisher
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                      Product Directives Officer
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                      cody.fisher@example.com
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                      Owner
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                      <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                                    </td>
+                                  </tr> %>
+
+                                  <%# end LOOP %>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
             </div>
-            <% end %>
+          </div>
           </div>
         </div>
-        <%# this is the end of the row  %>
-    <span class="ml-16 font-serif text-lg text-yellow-600">My Resources</span>
-      <div class="flex overflow-x-scroll pb-10 hide-scroll-bar">
-          <div class="flex flex-nowrap ml-10 ">
-        <% @resources.each do |resource|  %>
-            <div class="inline-block px-3">
-              <div class="w-80 h-48 max-w-xs overflow-hidden rounded-lg shadow-md  hover:shadow-xl transition-shadow duration-300 ease-in-out">
-                <div class="group h-40 px-4 py-4 rounded-md  flex flex-col justify-evenly ml-3 mr-3 mt-3 mb-3">
-                  <h5><%= resource.name %></h5>
-                  <h6><%= resource.time %></h6>
-                  <p><%= resource.description %></p>
-                </div>
-              </div>
-            </div>
-            <% end %>
-          </div>
-        </div>
-
-
-
-          <span class="ml-16 font-serif text-lg text-yellow-600">New Jobs</span>
-      <div class="flex overflow-x-scroll pb-10 hide-scroll-bar">
-          <div class="flex flex-nowrap ml-10 ">
-          <%# cards begin %>
-
-          <% @newjobs.each do |job|  %>
-            <div class="inline-block px-3">
-              <div class="w-80 h-48 max-w-xs overflow-hidden rounded-lg shadow-md  hover:shadow-xl transition-shadow duration-300 ease-in-out">
-                <div class="group h-40 px-4 py-4 rounded-md  flex flex-col justify-evenly ml-3 mr-3 mt-3 mb-3">
-                  <h5><%= job.title %></h5>
-                  <h6><%= job.industry %></h6>
-                  <p><%= job.description %></p>
-                </div>
-              </div>
-            </div>
-            <% end %>
-          </div>
-        </div>
-
-
-
-
-    <div>
+      </div>
+    </main>
+  </div>
+</div>
