@@ -5,6 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Favorite.delete_all
+User.delete_all
+Job.delete_all
+Resource.delete_all
+TestResult.delete_all
 13.times do
   Job.create(title: Faker::Job.title, industry: Faker::Job.field, new: true, fav: true, url: Faker::Internet.url, description: Faker::ChuckNorris.fact, kind: 'Job')
 end
