@@ -10,6 +10,7 @@ class PagesController < ApplicationController
     @jobs = current_user.favorited_jobs
     @resources = current_user.favorited_resources
     @user = current_user
+    @newjobs = Job.where(new: true)
   end
 
   def profile
