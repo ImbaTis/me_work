@@ -6,13 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 13.times do
-  Job.create(title: Faker::Job.title, industry: Faker::Job.field, new: true, fav: true)
+  Job.create(title: Faker::Job.title, industry: Faker::Job.field, new: true, fav: true, url: Faker::Internet.url, description: Faker::ChuckNorris.fact, kind: 'Job')
 end
 50.times do
-  Job.create(title: Faker::Job.title, industry: Faker::Job.field, new: false, fav: false)
+  Job.create(title: Faker::Job.title, industry: Faker::Job.field, new: false, fav: false, url: Faker::Internet.url, description: Faker::ChuckNorris.fact, kind: 'Gig')
 end
 18.times do
-  Job.create(title: Faker::Job.title, industry: Faker::Job.field, new: true, fav: false)
+  Job.create(title: Faker::Job.title, industry: Faker::Job.field, new: true, fav: false, url: Faker::Internet.url, description: Faker::ChuckNorris.fact, kind: 'Job')
 end
 
 10.times do
