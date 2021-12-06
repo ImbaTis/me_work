@@ -14,10 +14,10 @@
             <%= link_to "Dashboard", dashboard_path, class: "text-white font-medium hover:text-yellow-800" %>
 
         <% if user_signed_in? %>
-          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "text-white font-medium bg-yellow-800 text-white font-bold py-2 px-4 rounded" %>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "text-white font-medium bg-yellow-500 text-white font-bold py-2 px-4 rounded" %>
           <%# <%= image_tag "logo.png", alt: "Me Work", width: 150 %>
         <% else %>
-          <%= link_to "Login", new_user_session_path, class:"text-white font-medium bg-yellow-800 text-white font-bold py-2 px-4 rounded" %>
+          <%= link_to "Login", new_user_session_path, class:"text-white font-medium bg-yellow-600 text-white font-bold py-2 px-4 rounded" %>
         <% end %>
         </nav>
   </div>
