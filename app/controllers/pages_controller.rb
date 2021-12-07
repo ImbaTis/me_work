@@ -18,7 +18,7 @@ class PagesController < ApplicationController
   end
 
   def assessments
-
+    @assessments = Assessment.all
   end
-  
+
 end

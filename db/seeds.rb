@@ -5,11 +5,17 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Assessment.delete_all
 TestResult.delete_all
 Favorite.delete_all
 User.delete_all
 Job.delete_all
 Resource.delete_all
+
+Assessment.create(title: "Demo", description: "Personality Assessment", time: "1min", date: "Not Taken", url: "")
+Assessment.create(title: "MBIT", description: "Personality Assessment", time: "30min", date: "11/12/2021", url: "https://www.16personalities.com/free-personality-test")
+Assessment.create(title: "Enneagram", description: "Personality Assessment", time: "45min", date: "15/12/2021", url: "https://www.truity.com/test/enneagram-personality-test")
+
 
 13.times do
   Job.create(title: Faker::Job.title, industry: Faker::Job.field, new: true, fav: true, url: Faker::Internet.url, description: Faker::ChuckNorris.fact, kind: 'Job')
