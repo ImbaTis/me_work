@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-  resources :resources, only: [ :show, :index ]do
+  resources :resources, only: [ :show, :index ] do
     collection do
       get :article, :book, :course, :video
     end
@@ -13,5 +13,4 @@ Rails.application.routes.draw do
   get 'dashboard', to: 'pages#dashboard'
   get 'profile', to: 'pages#profile'
   get 'assessments', to: 'pages#assessments'
-
 end
