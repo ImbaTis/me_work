@@ -5,7 +5,6 @@ class ResourcesController < ApplicationController
   end
 
   def index
-    # params[:kind]
     if params == ''
       @resources = Resource.where(kind: params[:kind])
     else
