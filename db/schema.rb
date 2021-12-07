@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 2021_12_07_041530) do
     t.string "kind"
     t.string "url"
     t.string "description"
+    t.string "company"
   end
 
   create_table "resources", force: :cascade do |t|

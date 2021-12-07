@@ -8,12 +8,9 @@ class JobsController < ApplicationController
   end
 
   def index
-    @jobs = Job.where(fav: false)
+    @jobs = Job.all
     @user = current_user
   end
-
-
-
 
   private
 
