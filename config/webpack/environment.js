@@ -1,4 +1,7 @@
 const { environment } = require('@rails/webpacker')
+const erb = require('./loaders/erb')
+const { VueLoaderPlugin } = require('vue-loader')
+const vue = require('./loaders/vue')
 
 const webpack = require('webpack');
 // Preventing Babel from transpiling NodeModules packages
@@ -11,4 +14,7 @@ environment.plugins.prepend('Provide',
     Popper: ['popper.js', 'default']
   })
 );
+environment.plugins.prepend('VueLoaderPlugin', new VueLoaderPlugin())
+environment.loaders.prepend('vue', vue)
+environment.loaders.prepend('erb', erb)
 module.exports = environment
