@@ -83,7 +83,7 @@
                                   <%# Start loop %>
                                   <% @assessments.each_with_index do |assessment, i| %>
                                   <a href="<%=assessment.url%>" >
-                                  <tr class="<%= i.odd? ? 'bg-white' : 'bg-gray-50' %> assessment" >
+                                  <tr class="<%= i.odd? ? 'bg-white' : 'bg-gray-50' %> assessment" data-id="<%=assessment.id%>">
                                     <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                                       <%= assessment.title %>
                                     </td>
@@ -163,7 +163,7 @@
   }
   ```
 -->
-<div class="fixed inset-0 overflow-hidden" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
+<div class="fixed inset-0 overflow-hidden" aria-labelledby="slide-over-title" role="dialog" aria-modal="true" id="slider">
   <div class="absolute inset-0 overflow-hidden">
     <!-- Background overlay, show/hide based on slide-over state. -->
     <div class="absolute inset-0" aria-hidden="true">
@@ -193,7 +193,7 @@
                     </p>
                   </div>
                   <div class="h-7 flex items-center">
-                    <button type="button" class="text-gray-400 hover:text-gray-500">
+                    <button type="button" class="text-gray-400 hover:text-gray-500" id="closepanel">
                       <span class="sr-only">Close panel</span>
                       <!-- Heroicon name: outline/x -->
                       <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">

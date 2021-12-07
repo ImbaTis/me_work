@@ -1,7 +1,5 @@
 require 'json'
 Assessment.delete_all
-
-
 TestResult.delete_all
 Favorite.delete_all
 User.delete_all
@@ -174,3 +172,4 @@ user = User.new(
     end
     puts "fav #{res.id} created"
   end
+end
