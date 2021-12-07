@@ -1,10 +1,10 @@
 <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-8 ">
 
   <!-- Section Headings -->
-  <div class="pb-5 border-b border-gray-200 sm:pb-0">
-    <h3 class="text-lg leading-6 font-medium text-gray-900">
-      All My Favorites
-    </h3>
+  <div class=" mt-4 pb-5 border-b border-gray-200 sm:pb-0">
+      <h3 class="text-lg leading-6 font-medium text-gray-900">
+        All My Favorites
+      </h3>
     <div class="mt-3 sm:mt-4">
       <!-- Dropdown menu on small screens -->
       <div class="sm:hidden">
@@ -69,7 +69,9 @@
     </div>
   </div>
 
+  <div class="mt-3">
    Mood Board -->
+  </div>
 
     <%# Profile here %>
   <div class="py-4">
@@ -144,63 +146,97 @@
   </div>
 </div>
 
-
-
 <!-- Section and card content -->
+  <!-- Card Top and Title -->
 
-<div class="flex flex-col justify-evenly h-auto bg-gray-200">
-    <div class="mt-5">
-     <span class="ml-16 font-lato text-lg text-yellow-500">My Saved Jobs</span>
-      <div class="flex overflow-x-scroll pb-10 hide-scroll-bar">
-          <div class="flex flex-nowrap ml-10 ">
-            <% @jobs.each do |job|  %>
-            <div class="inline-block px-3">
-              <div class="w-80 h-48 max-w-xs overflow-hidden rounded-lg shadow-md  hover:shadow-xl transition-shadow duration-300 ease-in-out">
-                <div class="group h-40 px-4 py-4 rounded-md  flex flex-col justify-center  items-stretch  ml-3 mr-3 mt-3 mb-3">
-                  <h5 class="self-start"><%= job.title %></h5>
-                  <h6><%= job.industry %></h6>
-                  <%# <p><%= job.description %>
+  <template>
+      <div class="flex w-full items-center dark:bg-gray-900 py-12 px-6 flex justify-center items-center">
+          <div>
+              <div class="max-w-xs h-64 flex flex-col justify-between bg-white dark:bg-gray-800 rounded-lg border border-gray-400 mb-6 py-5 px-4">
+                  <div>
+                      <h4 class="text-gray-800 dark:text-gray-100 font-bold mb-3">13 things to work on</h4>
+                      <p class="text-gray-800 dark:text-gray-100 text-sm">Probabo, inquit, sic agam, ut labore et voluptatem sequi nesciunt, neque porro quisquam est, quid malum, sensu iudicari, sed ut alterum.</p>
+                  </div>
+                  <div>
+                      <div class="flex items-center justify-between text-gray-800">
+                          <p class="text-sm dark:text-gray-100">March 28, 2020</p>
+                          <div class="w-8 h-8 rounded-full bg-gray-800 text-white flex items-center justify-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pencil" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" />
+                                  <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" />
+                                  <line x1="13.5" y1="6.5" x2="17.5" y2="10.5" />
+                              </svg>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </template>
+
+  <!-- Card Body and Content -->
+
+  <style scoped>
+  body {
+      font-family: "Lato", sans-serif;
+  }
+  </style>
+
+  <div class="flex flex-col justify-evenly h-auto bg-gray-100">
+      <div class="mt-5">
+      <span class="ml-16 font-lato text-lg text-yellow-500">My Saved Jobs</span>
+        <div class="flex overflow-x-scroll pb-10 hide-scroll-bar">
+            <div class="flex flex-nowrap ml-10 ">          <% @jobs.each do |job|  %>
+              <div class="inline-block px-3">
+                <div class="w-80 h-48 max-w-xs overflow-hidden rounded-lg shadow-md  hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                  <div class="group h-40 px-4 py-4 rounded-md  flex flex-col justify-center  items-stretch  ml-3 mr-3 mt-3 mb-3 bg-white">
+                    <img class="w-full" src="/img/card-top.jpg" alt="Sunset in the mountains">
+                    <div class="px-6 py-4"></div>
+                    <h5 class="self-start"><%= job.title %></h5>
+                    <h6><%= job.industry %></h6>
+                    <p><%= job.description %></p>
+                  </div>
+
                 </div>
               </div>
+              <% end %>
             </div>
-            <% end %>
           </div>
-        </div>
-        <%# this is the end of the row  %>
-    <span class="ml-16 font-lato text-lg text-yellow-500">My Saved Gigs</span>
-      <div class="flex overflow-x-scroll pb-10 hide-scroll-bar">
-          <div class="flex flex-nowrap ml-10 ">
-        <% @resources.each do |resource|  %>
-            <div class="inline-block px-3">
-              <div class="w-80 h-48 max-w-xs overflow-hidden rounded-lg shadow-md  hover:shadow-xl transition-shadow duration-300 ease-in-out">
-                <div class="group h-40 px-4 py-4 rounded-md  flex flex-col justify-evenly ml-3 mr-3 mt-3 mb-3">
-                  <h5><%= resource.name %></h5>
-                  <h6><%= resource.time %></h6>
-                  <p><%= resource.description %></p>
+          <%# this is the end of the row  %>
+      <span class="ml-16 font-lato text-lg text-yellow-500">My Saved Gigs</span>
+        <div class="flex overflow-x-scroll pb-10 hide-scroll-bar">
+            <div class="flex flex-nowrap ml-10 ">
+          <% @resources.each do |resource|  %>
+              <div class="inline-block px-3">
+                <div class="w-80 h-48 max-w-xs overflow-hidden rounded-lg shadow-md  hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                  <div class="group h-40 px-4 py-4 rounded-md  flex flex-col justify-evenly ml-3 mr-3 mt-3 mb-3">
+                    <h5><%= resource.name %></h5>
+                    <h6><%= resource.time %></h6>
+                    <p><%= resource.description %></p>
+                  </div>
                 </div>
               </div>
+              <% end %>
             </div>
-            <% end %>
           </div>
-        </div>
 
 
 
-          <span class="ml-16 font-lato text-lg text-yellow-500">New Jobs For Me</span>
-      <div class="flex overflow-x-scroll pb-10 hide-scroll-bar">
-          <div class="flex flex-nowrap ml-10 ">
-          <%# cards begin %>
+            <span class="ml-16 font-lato text-lg text-yellow-500">New Jobs For Me</span>
+        <div class="flex overflow-x-scroll pb-10 hide-scroll-bar">
+            <div class="flex flex-nowrap ml-10 ">
+            <%# cards begin %>
 
-          <% @newjobs.each do |job|  %>
-            <div class="inline-block px-3">
-              <div class="w-80 h-48 max-w-xs overflow-hidden rounded-lg shadow-md  hover:shadow-xl transition-shadow duration-300 ease-in-out">
-                <div class="group h-40 px-4 py-4 rounded-md  flex flex-col justify-evenly ml-3 mr-3 mt-3 mb-3">
-                  <h5><%= job.title %></h5>
-                  <h6><%= job.industry %></h6>
-                  <p><%= job.description %></p>
+            <% @newjobs.each do |job|  %>
+              <div class="inline-block px-3">
+                <div class="w-80 h-48 max-w-xs overflow-hidden rounded-lg shadow-md  hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                  <div class="group h-40 px-4 py-4 rounded-md  flex flex-col justify-evenly ml-3 mr-3 mt-3 mb-3">
+                    <h5><%= job.title %></h5>
+                    <h6><%= job.industry %></h6>
+                    <p><%= job.description %></p>
+                  </div>
                 </div>
               </div>
+              <% end %>
             </div>
-            <% end %>
           </div>
-        </div>
