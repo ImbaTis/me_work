@@ -1,6 +1,10 @@
 class JobsController < ApplicationController
   before_action :set_job, only: [:show]
   def show
+    respond_to do |format|
+      format.html
+      format.json #{ render json: @job }
+    end
   end
 
   def index
