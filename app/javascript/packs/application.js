@@ -9,6 +9,7 @@ require("@rails/activestorage").start()
 require("channels")
 
 import "stylesheets/application"
+import { slideover } from "../scripts/slideover"
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
@@ -34,4 +35,5 @@ import "stylesheets/application"
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  slideover();
 });
