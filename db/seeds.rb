@@ -1,25 +1,26 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+require 'json'
+
 TestResult.delete_all
 Favorite.delete_all
 User.delete_all
 Job.delete_all
 Resource.delete_all
 
-13.times do
-  Job.create(title: Faker::Job.title, industry: Faker::Job.field, new: true, fav: true, url: Faker::Internet.url, description: Faker::ChuckNorris.fact, kind: 'Job')
+# Seeding jobs
+file = File.read('db/json/business.json')
+jobs = JSON.parse(file)["jobs"]
+
+jobs.each do |item|
+  Job.create(title: item["title"], company: item["company_name"], industry: item["category"], new: true, fav: true, url:item["url"], description: item["description"], kind: item["job_type"])
 end
-50.times do
-  Job.create(title: Faker::Job.title, industry: Faker::Job.field, new: false, fav: false, url: Faker::Internet.url, description: Faker::ChuckNorris.fact, kind: 'Gig')
-end
-18.times do
-  Job.create(title: Faker::Job.title, industry: Faker::Job.field, new: true, fav: false, url: Faker::Internet.url, description: Faker::ChuckNorris.fact, kind: 'Job')
-end
+
+# 50.times do
+#   Job.create(title: Faker::Job.title, industry: Faker::Job.field, new: false, fav: false, url: Faker::Internet.url, description: Faker::ChuckNorris.fact, kind: 'Gig')
+# end
+
+# 18.times do
+#   Job.create(title: Faker::Job.title, industry: Faker::Job.field, new: true, fav: false, url: Faker::Internet.url, description: Faker::ChuckNorris.fact, kind: 'Job')
+# end
 
 10.times do
   Resource.create(name: Faker::Book.title, kind: 'course', description: Faker::ChuckNorris.fact, url: Faker::Internet.url )
