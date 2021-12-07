@@ -1,4 +1,6 @@
 require 'json'
+Assessment.delete_all
+
 
 TestResult.delete_all
 Favorite.delete_all
@@ -6,12 +8,28 @@ User.delete_all
 Job.delete_all
 Resource.delete_all
 
+
+Assessment.create(title: "Demo", description: "Personality Assessment", time: "1min", date: "Not Taken", url: "")
+Assessment.create(title: "MBIT", description: "Personality Assessment", time: "30min", date: "11/12/2021", url: "https://www.16personalities.com/free-personality-test")
+Assessment.create(title: "Enneagram", description: "Personality Assessment", time: "45min", date: "15/12/2021", url: "https://www.truity.com/test/enneagram-personality-test")
+
+
+13.times do
+  Job.create(title: Faker::Job.title, industry: Faker::Job.field, new: true, fav: true, url: Faker::Internet.url, description: Faker::ChuckNorris.fact, kind: 'Job')
+end
+50.times do
+  Job.create(title: Faker::Job.title, industry: Faker::Job.field, new: false, fav: false, url: Faker::Internet.url, description: Faker::ChuckNorris.fact, kind: 'Gig')
+end
+18.times do
+  Job.create(title: Faker::Job.title, industry: Faker::Job.field, new: true, fav: false, url: Faker::Internet.url, description: Faker::ChuckNorris.fact, kind: 'Job')
+
 # Seeding jobs
 file = File.read('db/json/business.json')
 jobs = JSON.parse(file)["jobs"]
 
 jobs.each do |item|
   Job.create(title: item["title"], company: item["company_name"], industry: item["category"], new: true, fav: true, url:item["url"], description: item["description"], kind: item["job_type"])
+
 end
 
 # 50.times do

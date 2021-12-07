@@ -13,4 +13,8 @@ class PagesController < ApplicationController
     @user = current_user
   end
 
+  def assessments
+    @assessments = Assessment.all
+  end
+
 end
