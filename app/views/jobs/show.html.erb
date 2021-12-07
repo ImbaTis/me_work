@@ -1,1 +1,12 @@
-<p>We are hiring immediately for Call Center Representative/Customer Service Reps!</p>\n<p>The ideal Call Center Representative candidate must be confident and comfortable in multitasking (talking to customers while navigating and entering account information). Work from home </p>\n<p>Your daily responsibilities include:</p>\n<p>Assist our customers with their order or help with troubleshooting their products.</p>\n<p>Make follow-up calls or write follow-up emails as needed.<br>Answer basic customer service calls from customers that have already purchased (checking status of their orders and basic product troubleshooting).</p>\n<p>Processing and documenting orders from customers.</p>\n<p>Provide customers with an outstanding experience by professionally responding to their communications effectively and in a timely manner.</p>\n<p>Work effectively and seamlessly as a member of a team, present a solid One Team, Customer First attitude with each interaction.</p>\n<p>Review and manage orders entered via a Robotic Process Automation Portal for accuracy.</p>\n<p>Ability to manage and respond to a large volume of email in a professional and timely manner.</p>\n<p>Ability to work in a fast-paced high volume environment in a professional manner.</p>
+<div class="bg-yellow-500 text-center w-1/3 mx-auto rounded-lg my-9 p-2.5">
+  <%= @job.title %>
+</div>
+
+<div class="bg-yellow-500 text-center w-1/3 mx-auto rounded-lg my-9 p-2.5">
+  Company: <strong><%=  @job.company %></strong>
+</div>
+
+
+<div class="w-1/2 my-9 mx-auto">
+  <%= @job.description.html_safe%></div>
+</div>

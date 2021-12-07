@@ -1,5 +1,4 @@
 require 'json'
-lists = {}
 file = File.read('./json/business.json')
 jobs = JSON.parse(file)["jobs"]
 
