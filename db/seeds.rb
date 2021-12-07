@@ -14,22 +14,12 @@ Assessment.create(title: "MBIT", description: "Personality Assessment", time: "3
 Assessment.create(title: "Enneagram", description: "Personality Assessment", time: "45min", date: "15/12/2021", url: "https://www.truity.com/test/enneagram-personality-test")
 
 
-13.times do
-  Job.create(title: Faker::Job.title, industry: Faker::Job.field, new: true, fav: true, url: Faker::Internet.url, description: Faker::ChuckNorris.fact, kind: 'Job')
-end
-50.times do
-  Job.create(title: Faker::Job.title, industry: Faker::Job.field, new: false, fav: false, url: Faker::Internet.url, description: Faker::ChuckNorris.fact, kind: 'Gig')
-end
-18.times do
-  Job.create(title: Faker::Job.title, industry: Faker::Job.field, new: true, fav: false, url: Faker::Internet.url, description: Faker::ChuckNorris.fact, kind: 'Job')
-
 # Seeding jobs
 file = File.read('db/json/business.json')
 jobs = JSON.parse(file)["jobs"]
 
 jobs.each do |item|
   Job.create(title: item["title"], company: item["company_name"], industry: item["category"], new: true, fav: true, url:item["url"], description: item["description"], kind: item["job_type"])
-
 end
 
 # 50.times do
@@ -170,7 +160,7 @@ user = User.new(
   rand(1..10).times do
     res = TestResult.new(name: Faker::GreekPhilosophers.name, content: Faker::ChuckNorris.fact, user: user)
     unless res.save
-        puts "fav error #{res.errors.full_messages}"
+      puts "fav error #{res.errors.full_messages}"
     end
     puts "fav #{res.id} created"
   end
