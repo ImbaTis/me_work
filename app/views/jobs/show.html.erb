@@ -1,12 +1,13 @@
-<div class="bg-yellow-500 text-center w-1/3 mx-auto rounded-lg my-9 p-2.5">
-  <%= @job.title %>
+
+<div class="card-product w-1/2 items-center mx-auto mt-4">
+  <%= image_tag "moov.png", class:"ml-40"%>
+  <div class="card-product-infos ml-20">
+    <h2><%= @job.company %></h2>
+    <p> <%= @job.title %></p>
+    <p> ⭐️⭐️⭐️⭐️ <%=  rand(1000..2000) %> reviews </p>
+  </div>
 </div>
 
-<div class="bg-yellow-500 text-center w-1/3 mx-auto rounded-lg my-9 p-2.5">
-  Company: <strong><%=  @job.company %></strong>
-</div>
-
-<div class="w-1/2 my-9 mx-auto">
+<div class="w-7/12 my-9 mx-auto">
   <%= @job.description.html_safe%></div>
 </div>
-
