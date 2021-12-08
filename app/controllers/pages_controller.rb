@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  # layout 'landing'
+
   skip_before_action :authenticate_user!, only: [ :home ]
 
   def dashboard
@@ -15,6 +15,10 @@ class PagesController < ApplicationController
 
   def assessments
     @assessments = Assessment.all
+  end
+
+  def home
+    render layout: 'landing'
   end
 
 end
