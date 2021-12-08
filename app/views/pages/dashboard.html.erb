@@ -76,26 +76,25 @@
             <% @jobs.each do |job|  %>
               <div class="inline-block px-3">
                 <div class="w-80 h-48 max-w-xs overflow-hidden rounded-lg shadow-md  hover:shadow-xl transition-shadow duration-300 ease-in-out">
-                  <div class="group h-40 px-4 py-4 rounded-md  flex flex-col justify-center  items-stretch  ml-3 mr-3 mt-3 mb-3 bg-white">
-                    <h5 class="self-start"><%= job.title %></h5>
-                    <h6><%= job.company%></h6>
+                  <div class="group h-40 rounded-md flex flex-col justify-evenly ml-3 mr-3 mt-3 mb-3 bg-white">
+                    <h6><%= job.title %></h6>
+                    <h6><<%= job.company %></h6>
+                    <h6> Hotness: <%= "🔥" * rand(1..5) %></h6>
                   </div>
-
                 </div>
               </div>
               <% end %>
             </div>
           </div>
           <%# this is the end of the row  %>
-      <span class="ml-16 font-lato text-lg text-yellow-500">My Saved Gigs</span>
+      <span class="ml-16 font-lato text-lg text-yellow-500">My Saved Resources</span>
         <div class="flex overflow-x-scroll pb-10 hide-scroll-bar">
             <div class="flex flex-nowrap ml-10 ">
               <% @resources.each do |resource|  %>
               <div class="inline-block px-3">
                 <div class="w-80 h-48 max-w-xs overflow-hidden rounded-lg shadow-md  hover:shadow-xl transition-shadow duration-300 ease-in-out">
                   <div class="group h-40 px-4 py-4 rounded-md  flex flex-col justify-evenly ml-3 mr-3 mt-3 mb-3">
-                    <h5><%= resource.name %></h5>
-                    <h6><%= resource.time %></h6>
+                    <h5 class="font-bold"><%= resource.name %></h5>
                     <p><%= resource.description %></p>
                   </div>
                 </div>
@@ -113,8 +112,8 @@
                 <div class="inline-block px-3">
                   <div class="w-80 h-48 max-w-xs overflow-hidden rounded-lg shadow-md  hover:shadow-xl transition-shadow duration-300 ease-in-out">
                     <div class="group h-40 px-4 py-4 rounded-md  flex flex-col justify-evenly ml-3 mr-3 mt-3 mb-3">
-                     <h5><%= job.title %></h5>
-                      <h6><%= job.industry %></h6>
+                     <h5 class="font-bold"><%= job.title %></h5>
+                      <h6 class="bg-yellow-500 w-20 rounded-lg px-1.5 py-1.5 text-white"><%= job.industry %></h6>
                     </div>
                   </div>
                 </div>
