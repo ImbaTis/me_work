@@ -1,27 +1,95 @@
 <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-8 ">
 
+<div class="mt-4 pb-5 border-b border-gray-200 sm:pb-0">
+  <h3 class="text-lg leading-6 font-medium text-gray-900">
+    All My Saved Career Resources
+  </h3>
+  <div class="mt-3 sm:mt-4">
+    <%# <!-- Dropdown menu on small screens -->
+    <div class="sm:hidden">
+      <label for="current-tab" class="sr-only">Select a tab</label>
+      <select id="current-tab" name="current-tab" class="block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+        <option>Applied</option>
+
+        <option>Phone Screening</option>
+
+        <option selected>Interview</option>
+
+        <option>Offer</option>
+
+        <option>Hired</option>
+      </select>
+    </div> %>
+    <!-- Tabs at small breakpoint and up -->
+    <div class="hidden sm:block">
+      <nav class="-mb-px flex space-x-8">
+        <!-- Current: "border-indigo-500 text-indigo-600", Default: "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300" -->
+        <a href="#" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-yellow-500 whitespace-nowrap pb-4 px-1 border-b-2 font-md text-medium">
+          Full-Time Jobs
+        </a>
+
+        <a href="#" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-yellow-500 whitespace-nowrap pb-4 px-1 border-b-2 font-md text-medium">
+          Part-Time / Contract Work
+        </a>
+
+        <a href="#" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-yellow-500 whitespace-nowrap pb-4 px-1 border-b-2 font-md text-medium">
+          Gigs / Freelancer Work
+        </a>
+
+        <a href="#" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-yellow-500 whitespace-nowrap pb-4 px-1 border-b-2 font-md text-medium">
+          Articles
+        </a>
+
+        <a href="#" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-yellow-500 whitespace-nowrap pb-4 px-1 border-b-2 font-md text-medium">
+          Videos
+        </a>
+
+        <a href="#" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-yellow-500 whitespace-nowrap pb-4 px-1 border-b-2 font-md text-medium">
+          Books
+        </a>
+
+        <a href="#" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-yellow-500 whitespace-nowrap pb-4 px-1 border-b-2 font-md text-medium">
+          Courses
+        </a>
+
+        <a href="#" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-yellow-500 whitespace-nowrap pb-4 px-1 border-b-2 font-md text-medium">
+          Events
+        </a>
+
+        <a href="#" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-yellow-500 whitespace-nowrap pb-4 px-1 border-b-2 font-md text-medium">
+          Mentors
+        </a>
+
+        <%# <a href="#" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap pb-4 px-1 border-b-2 font-medium text-sm">
+          Hired
+        </a> %>
+      </nav>
+    </div>
+  </div>
+</div>
+
     <%# Profile here %>
+  <%# Profile here %>
   <div class="py-4">
     <div>
       <div class="relative bg-gray-200">
         <div class="lg:absolute lg:inset-0">
           <div class="lg:absolute lg:inset-y-0 lg:left-0 lg:w-1/2">
-          <%= image_tag "resources.png", alt: "Le Wagon", class: "h-56 w-full object-cover lg:absolute lg:h-full" %>
+          <%= image_tag "dashtree.jpeg", alt: "Le Wagon", class: "h-56 w-full object-cover lg:absolute lg:h-full" %>
           </div>
         </div>
         <div class="relative pt-12 pb-16 px-4 sm:pt-16 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto lg:grid lg:grid-cols-2">
           <div class="lg:col-start-2 lg:pl-8">
             <div class="text-base max-w-prose mx-auto lg:max-w-lg lg:ml-auto lg:mr-0">
-              <h2 class="leading-6 text-gray-900 font-semibold tracking-wide uppercase">Invest in Yourself</h2>
-              <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-yellow-500 sm:text-4xl">Expand Your Horizons</h3>
-
+              <h2 class="leading-6 text-gray-900 font-semibold tracking-wide uppercase">take control of your own career</h2>
+              <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-yellow-500 sm:text-4xl">If I Don't Do It, Then Who Will?</h3>
               <blockquote class="mt-6 md:flex-grow md:flex md:flex-col">
-              <div class="relative text-lg font-medium text-indigo-800 md:flex-grow">
+              <div class="mt-8 relative text-2xl font-medium text-indigo-800 md:flex-grow">
                   <p class="relative"><h2>
-                    Education is the passport to the future, for tomorrow belongs to those who prepare for it today.</h2>
+                    "Accept responsibility for your life. Know that it is you who will get you where you want to go, NO ONE ELSE"</h2>
                   </p>
-                <div class="text-right">
-                  <p> – Malcolm X</p>
+                <div class="mt-3 text-right text-2xl">
+                  <p> – Les Brown</p>
 
               </div>
             </div>
@@ -32,11 +100,29 @@
 
 </div>
 
+<!--
+  This example requires Tailwind CSS v2.0+
 
-<!-- Cards Section Title -->
-<div class="pb-5 border-b border-gray-200 items-center">
+  This example requires some changes to your config:
+
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/forms'),
+    ],
+  }
+  ```
+-->
+<div class="mt-4 pb-5 border-b border-gray-200 sm:flex sm:items-center sm:justify-between">
+  <h3 class="text-lg leading-6 font-medium text-gray-900">
+    <%# Job Postings %>
+  </h3>
   <div class="mt-3 sm:mt-0 sm:ml-4">
-    <label for="desktop-search-candidate" class="sr-only">Search</label>
+    <label for="mobile-search" class="sr-only">Search</label>
+    <label for="desktop-search" class="sr-only">Search</label>
     <div class="flex rounded-md shadow-sm">
       <div class="relative flex-grow focus-within:z-10">
         <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -45,8 +131,8 @@
             <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
           </svg>
         </div>
-        <input type="text" name="mobile-search-candidate" id="mobile-search-candidate" class="focus:ring-indigo-500 focus:border-indigo-500 block w-full rounded-none rounded-l-md pl-10 sm:hidden border-gray-300" placeholder="Search">
-        <input type="text" name="desktop-search-candidate" id="desktop-search-candidate" class="hidden focus:ring-indigo-500 focus:border-indigo-500 w-full rounded-none rounded-l-md pl-10 sm:block sm:text-sm border-gray-300" placeholder="Search candidates">
+        <input type="text" name="mobile-search" id="mobile-search" class="focus:ring-indigo-500 focus:border-indigo-500 block w-full rounded-none rounded-l-md pl-10 sm:hidden border-gray-300" placeholder="Search">
+        <input type="text" name="desktop-search" id="desktop-search" class="hidden focus:ring-indigo-500 focus:border-indigo-500 w-full rounded-none rounded-l-md pl-10 sm:block sm:text-sm border-gray-300" placeholder="Search">
       </div>
       <button type="button" class="-ml-px relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-r-md text-gray-700 bg-gray-50 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500">
         <!-- Heroicon name: solid/sort-ascending -->
@@ -63,11 +149,9 @@
   </div>
 </div>
 
-
-
   <div class="flex flex-col justify-evenly h-auto">
       <div class="mt-5">
-      <span class="ml-16 font-lato text-lg text-yellow-500">My Saved Jobs</span>
+      <span class="ml-16 font-lato text-lg text-indigo-800">My Saved Jobs</span>
         <div class="flex overflow-x-scroll pb-10 hide-scroll-bar">
             <div class="flex flex-nowrap ml-10 ">
             <% @jobs.each do |job|  %>
@@ -84,7 +168,7 @@
             </div>
           </div>
           <%# this is the end of the row  %>
-      <span class="ml-16 font-lato text-lg text-yellow-500">My Saved Resources</span>
+      <span class="ml-16 font-lato text-lg text-indigo-800">My Saved Resources</span>
         <div class="flex overflow-x-scroll pb-10 hide-scroll-bar">
             <div class="flex flex-nowrap ml-10 ">
               <% @resources.each do |resource|  %>
@@ -99,7 +183,7 @@
               <% end %>
             </div>
           </div>
-            <span class="ml-16 font-lato text-lg text-yellow-500">New Jobs For Me</span>
+            <span class="ml-16 font-lato text-lg text-indigo-800">New Jobs For Me</span>
               <div class="flex overflow-x-scroll pb-10 hide-scroll-bar">
                <div class="flex flex-nowrap ml-10 ">
                 <% @newjobs.each do |job|  %>
