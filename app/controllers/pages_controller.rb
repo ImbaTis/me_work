@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 
-  skip_before_action :authenticate_user!, only: [ :home ]
+  skip_before_action :authenticate_user!, only: [ :home, :joinus ]
 
   def home
     render layout: 'landing'
@@ -11,6 +11,7 @@ class PagesController < ApplicationController
     @resources = current_user.favorited_resources
     @user = current_user
     @newjobs = Job.where(new: true)
+    render layout: 'notification'
   end
 
   def profile
@@ -19,6 +20,10 @@ class PagesController < ApplicationController
 
   def assessments
     @assessments = Assessment.all
+  end
+
+  def joinus
+    render layout: 'landing'
   end
 
 end

@@ -14,9 +14,6 @@
             <div class="text-base max-w-prose mx-auto lg:max-w-lg lg:ml-auto lg:mr-0">
               <h2 class="leading-6 text-gray-900 font-semibold tracking-wide uppercase">Invest in Yourself</h2>
               <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-yellow-500 sm:text-4xl">Expand Your Horizons</h3>
-              <%# <p class="mt-8 text-lg text-gray-500">Education is the passport to the future, for tomorrow belongs to those who prepare for it today</p>
-              <div class="mt-5 prose prose-indigo text-gray-500">
-                <p> – Malcolm X </p> %>
 
               <blockquote class="mt-6 md:flex-grow md:flex md:flex-col">
               <div class="relative text-lg font-medium text-indigo-800 md:flex-grow">
@@ -76,26 +73,25 @@
             <% @jobs.each do |job|  %>
               <div class="inline-block px-3">
                 <div class="w-80 h-48 max-w-xs overflow-hidden rounded-lg shadow-md  hover:shadow-xl transition-shadow duration-300 ease-in-out">
-                  <div class="group h-40 px-4 py-4 rounded-md  flex flex-col justify-center  items-stretch  ml-3 mr-3 mt-3 mb-3 bg-white">
-                    <h5 class="self-start"><%= job.title %></h5>
-                    <h6><%= job.company%></h6>
+                  <div class="group h-40 rounded-md flex flex-col justify-evenly ml-3 mr-3 mt-3 mb-3 bg-white">
+                    <h6><%= job.title %></h6>
+                    <h6><<%= job.company %></h6>
+                    <h6> Hotness: <%= "🔥" * rand(1..5) %></h6>
                   </div>
-
                 </div>
               </div>
               <% end %>
             </div>
           </div>
           <%# this is the end of the row  %>
-      <span class="ml-16 font-lato text-lg text-yellow-500">My Saved Gigs</span>
+      <span class="ml-16 font-lato text-lg text-yellow-500">My Saved Resources</span>
         <div class="flex overflow-x-scroll pb-10 hide-scroll-bar">
             <div class="flex flex-nowrap ml-10 ">
               <% @resources.each do |resource|  %>
               <div class="inline-block px-3">
                 <div class="w-80 h-48 max-w-xs overflow-hidden rounded-lg shadow-md  hover:shadow-xl transition-shadow duration-300 ease-in-out">
                   <div class="group h-40 px-4 py-4 rounded-md  flex flex-col justify-evenly ml-3 mr-3 mt-3 mb-3">
-                    <h5><%= resource.name %></h5>
-                    <h6><%= resource.time %></h6>
+                    <h5 class="font-bold"><%= resource.name %></h5>
                     <p><%= resource.description %></p>
                   </div>
                 </div>
@@ -103,9 +99,6 @@
               <% end %>
             </div>
           </div>
-
-
-
             <span class="ml-16 font-lato text-lg text-yellow-500">New Jobs For Me</span>
               <div class="flex overflow-x-scroll pb-10 hide-scroll-bar">
                <div class="flex flex-nowrap ml-10 ">
@@ -113,8 +106,8 @@
                 <div class="inline-block px-3">
                   <div class="w-80 h-48 max-w-xs overflow-hidden rounded-lg shadow-md  hover:shadow-xl transition-shadow duration-300 ease-in-out">
                     <div class="group h-40 px-4 py-4 rounded-md  flex flex-col justify-evenly ml-3 mr-3 mt-3 mb-3">
-                     <h5><%= job.title %></h5>
-                      <h6><%= job.industry %></h6>
+                     <h5 class="font-bold"><%= job.title%></h5>
+                      <h6 class="bg-yellow-500 w-20 rounded-lg px-1.5 py-1.5 text-white"><%= job.industry %></h6>
                     </div>
                   </div>
                 </div>
