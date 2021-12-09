@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   get 'dashboard', to: 'pages#dashboard'
   get 'profile', to: 'pages#profile'
   get 'assessments', to: 'pages#assessments'
+  get 'joinus', to: 'pages#joinus'
 end
