@@ -21,4 +21,8 @@ class PagesController < ApplicationController
     @assessments = Assessment.all
   end
 
+  def home
+    render layout: 'landing'
+  end
+
 end
