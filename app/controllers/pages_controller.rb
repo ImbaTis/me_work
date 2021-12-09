@@ -11,6 +11,7 @@ class PagesController < ApplicationController
     @resources = current_user.favorited_resources
     @user = current_user
     @newjobs = Job.where(new: true)
+    render layout: 'notification'
   end
 
   def profile
