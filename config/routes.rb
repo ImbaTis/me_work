@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   get 'profile', to: 'pages#profile'
   get 'assessments', to: 'pages#assessments'
   get 'joinus', to: 'pages#joinus'
+  get 'comingsoon', to: 'pages#comingsoon'
+
 end
