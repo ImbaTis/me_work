@@ -15,6 +15,16 @@ Assessment.create(title: "HEXACO", description: "HEXACO Personality Test", time:
 Assessment.create(title: "DISC", description: "Measure your behavioral style", time: "5min", date: "15/12/2021", url: "https://www.discprofiles.com/blog/2011/12/test-your-knowledge-of-disc-styles/")
 Assessment.create(title: "Clifton Strengths", description: "Discover the best part of yourself", time: "10min", date: "15/12/2021", url: "https://high5test.com/")
 Assessment.create(title: "Enneagram", description: "Get your unique portrait", time: "45min", date: "15/12/2021", url: "https://www.truity.com/test/enneagram-personality-test")
+Assessment.create(title: "MBIT", description: "Personality Assessment", time: "8min", date: "11/12/2021", url: "https://www.16personalities.com/free-personality-test")
+Assessment.create(title: "HEXACO", description: "HEXACO Personality Test", time: "10min", date: "15/12/2021", url: "https://www.idrlabs.com/hexaco/test.php")
+Assessment.create(title: "DISC", description: "Measure your behavioral style", time: "5min", date: "15/12/2021", url: "https://www.discprofiles.com/blog/2011/12/test-your-knowledge-of-disc-styles/")
+Assessment.create(title: "Clifton Strengths", description: "Discover the best part of yourself", time: "10min", date: "15/12/2021", url: "https://high5test.com/")
+Assessment.create(title: "Enneagram", description: "Get your unique portrait", time: "45min", date: "15/12/2021", url: "https://www.truity.com/test/enneagram-personality-test")
+Assessment.create(title: "MBIT", description: "Personality Assessment", time: "8min", date: "11/12/2021", url: "https://www.16personalities.com/free-personality-test")
+Assessment.create(title: "HEXACO", description: "HEXACO Personality Test", time: "10min", date: "15/12/2021", url: "https://www.idrlabs.com/hexaco/test.php")
+Assessment.create(title: "DISC", description: "Measure your behavioral style", time: "5min", date: "15/12/2021", url: "https://www.discprofiles.com/blog/2011/12/test-your-knowledge-of-disc-styles/")
+Assessment.create(title: "Clifton Strengths", description: "Discover the best part of yourself", time: "10min", date: "15/12/2021", url: "https://high5test.com/")
+Assessment.create(title: "Enneagram", description: "Get your unique portrait", time: "45min", date: "15/12/2021", url: "https://www.truity.com/test/enneagram-personality-test")
 
 # Seeding jobs
 file = File.read('db/json/business.json')

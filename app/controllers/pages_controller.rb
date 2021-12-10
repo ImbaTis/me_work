@@ -26,4 +26,10 @@ class PagesController < ApplicationController
     render layout: 'landing'
   end
 
+  def comingsoon
+        render layout: 'landing'
+  end
+
+
+
 end
