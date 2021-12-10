@@ -1,0 +1,2 @@
+class VisitorEmail < ApplicationRecord
+end

@@ -15,5 +15,6 @@ Rails.application.routes.draw do
   get 'assessments', to: 'pages#assessments'
   get 'joinus', to: 'pages#joinus'
   get 'comingsoon', to: 'pages#comingsoon'
+  post 'collect_email', to: 'pages#collect_email', as: :collect_email
 
 end
