@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 
-  skip_before_action :authenticate_user!, only: [ :home, :joinus, :comingsoon, :collect_email ]
+  skip_before_action :authenticate_user!, only: [ :home, :joinus, :comingsoon, :collect_email, :thankyou ]
 
   def home
     render layout: 'landing'
@@ -32,7 +32,11 @@ class PagesController < ApplicationController
 
   def collect_email
     @visitor_email = VisitorEmail.create(email: params[:email])
-    redirect_to root_path
+    redirect_to "/thankyou"
+  end
+
+  def thankyou
+    render layout: 'landing'
   end
 
 
