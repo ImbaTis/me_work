@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 
-  skip_before_action :authenticate_user!, only: [ :home, :joinus ]
+  skip_before_action :authenticate_user!, only: [ :home, :joinus, :comingsoon ]
 
   def home
     render layout: 'landing'
@@ -27,7 +27,7 @@ class PagesController < ApplicationController
   end
 
   def comingsoon
-        render layout: 'landing'
+    render layout: 'landing'
   end
 
 
